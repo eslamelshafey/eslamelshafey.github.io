@@ -1,288 +1,507 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Eslam Shafey Experienced Software Engineer with a strong background in designing scalable systems and secure APIs. Proficient in Laravel, ASP.NET Core, and Docker, Eslam specializes in building robust solutions for diverse industries.">
-
-    <meta property="og:title" content="Eslam Shafey's Portfolio">
-    <meta property="og:description" content="Eslam Shafey Experienced Software Engineer with a strong background in designing scalable systems and secure APIs. Proficient in Laravel, ASP.NET Core, and Docker, Eslam specializes in building robust solutions for diverse industries.">
-    <meta property="og:image" content="https://eslamelshafey.github.io/og-image.png">
-    <meta property="og:url" content="https://eslamelshafey.github.io">
-
-    <meta name="twitter:title" content="Eslam Shafey's Portfolio">
-    <meta name="twitter:description" content="://eslamelshafey.github.io">
-    <meta name="twitter:url" content="https://eslamelshafey.github.io/twitter-image.png">
-    <meta name="twitter:card" content="Eslam Shafey Experienced Software Engineer with a strong background in designing scalable systems and secure APIs. Proficient in Laravel, ASP.NET Core, and Docker, Eslam specializes in building robust solutions for diverse industries.">
+    <meta name="description" content="Eslam Shafey - Systems Architect, Full-Stack Software Engineer & Mobile App Engineer.">
+    <title>Eslam Shafey | Systems Architect & Software Engineer</title>
     
-    <title>Eslam Shafey's Portfolio</title>
-    <style>
-    <style>
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family: Arial, sans-serif; background:#f4f4f4; color:#333; }
-        header, footer { background:#222; color:#fff; text-align:center; padding:25px 15px; }
-        header h1 { font-size:2rem; font-weight:700; }
-        header h3 { font-size:1.2rem; margin-top:5px; }
-        section {
-            padding:25px;
-            margin:25px auto;
-            max-width:900px;
-            background:#fff;
-            border-radius:8px;
-            box-shadow:0 0 10px rgba(0,0,0,0.1);
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#050b14',
+                        glassBorder: 'rgba(255, 255, 255, 0.08)',
+                        glassBg: 'rgba(15, 23, 42, 0.4)',
+                        primary: '#3b82f6',
+                        whatsapp: '#25D366'
+                    },
+                    animation: {
+                        'blob': 'blob 10s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
         }
-        h2 { border-bottom:2px solid #333; padding-bottom:10px; margin-bottom:20px; font-size:1.6rem; }
-        ul { list-style:none; padding:0; }
-        ul li { margin:10px 0; line-height:1.6; }
-        .inline li { display:inline-block; margin-right:10px; }
-        a { color:#0084ff; text-decoration:none; }
-        a:hover { text-decoration:underline; }
-        .role-title { font-size:1.2rem; font-weight:600; }
-        .company { font-weight:600; }
+    </script>
+    <style>
+        body {
+            background-color: #050b14;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        
+        /* Deep Glassmorphism */
+        .glass-card {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.3) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1.25rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);
+            transform: skewX(-20deg);
+            transition: all 0.7s ease;
+        }
+        
+        .glass-card:hover {
+            border-color: rgba(59, 130, 246, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 45px rgba(59, 130, 246, 0.15);
+        }
+        
+        .glass-card:hover::before {
+            left: 200%;
+        }
+
+        .badge {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: #cbd5e1;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+        
+        .badge:hover {
+            background: rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.5);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050b14; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
     </style>
 </head>
-<body>
+<body class="bg-darkBg min-h-screen font-sans antialiased selection:bg-primary selection:text-white relative">
 
-    <header>
-        <h1>Eslam Shafey Abd El Wahab</h1>
-        <h3>Senior Software Engineer | Software Architect</h3>
-        <p>Cairo, Egypt</p>
-        <p>
-            <a target="_blank" style="color:#fff" href="mailto:eslamshafey5056@gmail.com">eslamshafey5056@gmail.com</a> |
-            <a target="_blank" style="color:#fff" href="https://www.linkedin.com/in/eslam-shafey-1a52171b6/">LinkedIn</a> |
-            <a target="_blank" style="color:#fff" href="https://github.com/eslamelshafey">Github</a>
-            <a target="_blank" style="color:#fff" href="https://www.linkedin.com/ambry/?x-li-ambry-ep=AQI9yIZwn6iSagAAAZHXsHIcDjBrLlaxPdY_boHUjF0KbMMdotPtXhHY9a0BhBzZ2dM-Bf2Imxpg3ns-VIJMFeNr9uMCXSQpAemX3JIYBSxNtBuGK5srN9QLzS9W0xe9FK8rSZQZAWqUMk54ZxqvzlQlfNPNHJVl-yKBfCucXsYIrP2kPonlzLicIsazqXY5rU_veMA5o6NIqV_e4XTIiM2g-fugY8p3MXtji2UUUqBX3N7vA_O-CqzdLuHCRhvbCQAPU7anUQULUgnD5WsEQdyiedDGOkFdohVamQzyICR6kJ2zQNc3x2Dn3f0efziBhPi0hUxOV3TvcqLIPF7Zvbf5rayBs7-31oo-MiFj0DaZ8JKML1c0P2mWQ3hY9KvOCKN2MsOKLDQkDxmSjq44fZx34tpDG4W43O6e9H0IJWVkEVsFHO4t6wbTRrlXvK_EZGxo-nyATEA39loDH7ZrNb5RYdWn8gLbNLu5laHMbbhsFQsvKfRzA5amsGDRKHkJ6N9gCtcJEiC3uvTWjMyhg6POZFjnhrmFcXPKmHRP1Ahqn1sSPrCkHP_Wg94ObKTBuw8VEEk">CV</a>
-        </p>
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-blue-600/20 rounded-full mix-blend-screen filter blur-[100px] opacity-70 animate-blob"></div>
+        <div class="absolute top-[20%] right-[-10%] w-96 h-96 bg-purple-600/20 rounded-full mix-blend-screen filter blur-[100px] opacity-70 animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-[-20%] left-[20%] w-[30rem] h-[30rem] bg-indigo-600/20 rounded-full mix-blend-screen filter blur-[120px] opacity-60 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <header class="fixed w-full top-0 z-50 glass-card rounded-none border-t-0 border-l-0 border-r-0 px-6 py-4 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-xl font-extrabold tracking-tight text-white flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                    <i class="fa-solid fa-layer-group text-white text-sm"></i>
+                </div>
+                Eslam Shafey
+            </div>
+            <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+                <a href="#services" class="hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all">Services</a>
+                <a href="#expertise" class="hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all">Expertise</a>
+                <a href="#experience" class="hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all">Experience</a>
+                <a href="#projects" class="hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all">Projects</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/201125547914" target="_blank" class="hidden md:flex items-center gap-2 text-whatsapp hover:text-green-400 font-semibold transition-colors">
+                    <i class="fa-brands fa-whatsapp text-lg animate-pulse-slow"></i> +20 112 554 7914
+                </a>
+                <a href="mailto:eslamshafey5056@gmail.com" class="relative group bg-primary hover:bg-blue-400 text-white px-6 py-2 rounded-full text-sm font-semibold transition-all overflow-hidden shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+                    <span class="relative z-10">Let's Talk</span>
+                    <div class="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+                </a>
+            </div>
+        </div>
     </header>
-    
-    <section id="about">
-        <h2>Professional Summary</h2>
-        <p>Software engineer with 9+ years of experience architecting and delivering scalable platforms, high-performance APIs, and secure enterprise systems. Skilled at simplifying complex business problems, optimizing infrastructure, and leading engineering initiatives that directly improve product reliability, maintainability, and business outcomes.</p>
-    </section>
 
-    <section id="experience">
-        <h2>Work Experience</h2>
+    <main class="max-w-6xl mx-auto px-6 pt-36 pb-20">
         
-        <div>
-            <h3>Senior Backend Engineer</h3>
-            <p><a target="_blank" href="https://egpay.com/">EGPay</a> 2024 | Present</p>
-            <ul>
-                <li>Design and maintain high-volume payment services supporting millions of users with an emphasis on stability, fault tolerance, and performance.</li>
-                <li>Architect scalable backend systems integrated with payment gateways including Visa, Meeza, Fawry, eFinance, POS devices and more.</li>
-                <li>Lead optimization efforts reducing operational cost and improving API response time under heavy transactional load.</li>
-                <li>Collaborate cross‑functionally to improve system reliability, enhance security, and streamline deployment pipelines.</li>
-            </ul>
+        <section class="py-16 md:py-24 max-w-4xl relative z-10">
+            <div class="reveal active inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-semibold mb-6 shadow-[0_0_15px_rgba(59,130,246,0.2)] backdrop-blur-md">
+                <span class="relative flex h-2.5 w-2.5">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+                </span>
+                9+ Years of Engineering Excellence
+            </div>
+            <h1 class="reveal delay-100 active text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight">
+                I architect and build <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 drop-shadow-lg">
+                    web, mobile, & backend systems.
+                </span>
+            </h1>
+            <p class="reveal delay-200 active text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-3xl font-light">
+                Seasoned Software Engineer and Systems Architect. I specialize in designing scalable cloud infrastructures, developing high-performance mobile applications (Flutter), and integrating complex, secure payment pipelines.
+            </p>
+            <div class="reveal delay-300 active flex flex-wrap gap-5 items-center">
+                <a href="#services" class="bg-white text-slate-900 px-8 py-3.5 rounded-xl font-bold hover:bg-slate-200 hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                    Explore My Services
+                </a>
+                <a href="https://wa.me/201125547914" target="_blank" class="glass-card px-8 py-3.5 rounded-xl font-bold text-white hover:border-whatsapp/50 hover:shadow-[0_0_20px_rgba(37,211,102,0.2)] flex items-center gap-2 transition-all">
+                    <i class="fa-brands fa-whatsapp text-xl text-whatsapp"></i> WhatsApp Me
+                </a>
+                <div class="flex gap-4 ml-2">
+                    <a href="https://www.linkedin.com/in/eslam-shafey-1a52171b6/" target="_blank" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-slate-300 hover:text-blue-400 hover:border-blue-400 transition-all hover:scale-110">
+                        <i class="fa-brands fa-linkedin-in text-lg"></i>
+                    </a>
+                    <a href="https://github.com/eslamelshafey" target="_blank" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-slate-300 hover:text-white transition-all hover:scale-110 hover:border-white">
+                        <i class="fa-brands fa-github text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-20 mt-10 relative">
+            <div class="reveal">
+                <h2 class="text-4xl font-bold text-white mb-3 tracking-tight">How I Can Help You</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-purple-500 rounded-full mb-6"></div>
+                <p class="text-slate-400 mb-12 max-w-2xl text-lg">From initial architecture to deployment across web and mobile platforms, I deliver end-to-end engineering solutions.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="reveal glass-card p-8 group">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-blue-500/20 transition-all duration-300">
+                        <i class="fa-solid fa-server text-2xl text-blue-400 group-hover:animate-float"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Backend & API</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Designing secure, high-traffic server-side solutions. Expertise in multi-tenant SaaS architectures and complex database management.</p>
+                </div>
+
+                <div class="reveal delay-100 glass-card p-8 group">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-purple-500/20 transition-all duration-300">
+                        <i class="fa-solid fa-mobile-screen-button text-2xl text-purple-400 group-hover:animate-float"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Web & Mobile</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Building dynamic, cross-platform experiences. Utilizing Flutter for high-performance apps, alongside React, Vue, and Nuxt.</p>
+                </div>
+
+                <div class="reveal delay-200 glass-card p-8 group">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-emerald-500/20 transition-all duration-300">
+                        <i class="fa-solid fa-shield-halved text-2xl text-emerald-400 group-hover:animate-float"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Fintech & Security</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Zero-downtime integration with payment gateways. Hardening data pipelines backed by enterprise security certifications.</p>
+                </div>
+
+                <div class="reveal delay-300 glass-card p-8 group">
+                    <div class="w-14 h-14 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-orange-500/20 transition-all duration-300">
+                        <i class="fa-solid fa-cart-shopping text-2xl text-orange-400 group-hover:animate-float"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Order Systems</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Architecting scalable order-taking platforms (like Talabat) handling real-time requests, high traffic peaks, and delivery workflows.</p>
+                </div> 
+            </div>
+        </section>
+
+        <section id="expertise" class="py-20">
+            <div class="reveal glass-card p-10 relative overflow-hidden border-t border-l border-white/10">
+                <div class="absolute -bottom-10 -right-10 p-10 opacity-[0.03] pointer-events-none transition-transform duration-700 hover:scale-110 hover:rotate-12">
+                    <i class="fa-solid fa-microchip text-[15rem]"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-white mb-2 relative z-10">Technical Arsenal</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-purple-500 rounded-full mb-10 relative z-10"></div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 relative z-10">
+                    <div class="space-y-4">
+                        <h3 class="text-primary font-bold tracking-wide uppercase text-sm border-b border-glassBorder pb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-code text-white/50"></i> Web & Mobile
+                        </h3>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="badge">Flutter</span>
+                            <span class="badge">Laravel</span>
+                            <span class="badge">React.js</span>
+                            <span class="badge">Vue.js / Nuxt</span>
+                            <span class="badge">ASP.NET Core</span>
+                            <span class="badge">Node.js</span>
+                            <span class="badge">Java Spring Boot</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-primary font-bold tracking-wide uppercase text-sm border-b border-glassBorder pb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-terminal text-white/50"></i> Languages
+                        </h3>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="badge">PHP</span>
+                            <span class="badge">Python</span>
+                            <span class="badge">Java</span>
+                            <span class="badge">C#</span>
+                            <span class="badge">JavaScript / TS</span>
+                            <span class="badge">Bash / PowerShell</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-primary font-bold tracking-wide uppercase text-sm border-b border-glassBorder pb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-cloud text-white/50"></i> DevOps & Data
+                        </h3>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="badge">Docker</span>
+                            <span class="badge">AWS</span>
+                            <span class="badge">PostgreSQL</span>
+                            <span class="badge">MongoDB</span>
+                            <span class="badge">Redis</span>
+                            <span class="badge">S3</span>
+                            <span class="badge">RabbitMQ</span>
+                            <span class="badge">NGINX</span>
+                            <span class="badge">CI / CD</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-primary font-bold tracking-wide uppercase text-sm border-b border-glassBorder pb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-certificate text-white/50"></i> Certifications
+                        </h3>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="badge text-emerald-300 border-emerald-500/40 bg-emerald-500/10 shadow-[0_0_10px_rgba(16,185,129,0.1)]">OSCP</span>
+                            <span class="badge text-emerald-300 border-emerald-500/40 bg-emerald-500/10 shadow-[0_0_10px_rgba(16,185,129,0.1)]">CEH</span>
+                            <span class="badge text-emerald-300 border-emerald-500/40 bg-emerald-500/10 shadow-[0_0_10px_rgba(16,185,129,0.1)]">RHCE</span>
+                            <span class="badge text-emerald-300 border-emerald-500/40 bg-emerald-500/10 shadow-[0_0_10px_rgba(16,185,129,0.1)]">CCNA Sec</span>
+                            <a target="_blank" href="https://www.udacity.com/certificate/e/657b835e-f937-11ec-a042-bfaed8e20d06" class="badge text-emerald-300 border-emerald-500/40 bg-emerald-500/10 shadow-[0_0_10px_rgba(16,185,129,0.1)]">Web</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-20 relative">
+            <div class="reveal">
+                <h2 class="text-3xl font-bold text-white mb-2">Professional Experience</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-purple-500 rounded-full mb-12"></div>
+            </div>
+
+            <div class="space-y-8 border-l-2 border-slate-800/80 ml-4 pl-8 relative">
+                
+                <div class="reveal relative group">
+                    <div class="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-primary ring-4 ring-darkBg shadow-[0_0_10px_rgba(59,130,246,0.8)] group-hover:scale-125 transition-transform duration-300"></div>
+                    <div class="glass-card p-6 -mt-2 hover:bg-slate-800/30">
+                        <h3 class="text-xl font-bold text-white flex items-center justify-between flex-wrap gap-2">
+                            Senior Backend Engineer
+                            <span class="text-xs font-mono bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full border border-blue-500/30">2024 - Present</span>
+                        </h3>
+                        <a target="_blank" href="https://egpay.com" class="inline-block text-primary font-medium mt-1 mb-4 hover:underline">EGPay</a>
+                        <p class="text-slate-400 text-sm leading-relaxed">Architecting scalable backend systems for high-volume payment services. Managing integrations with major payment gateways and optimizing infrastructure to reduce operational costs and ensure fault tolerance.</p>
+                    </div>
+                </div>
+
+                <div class="reveal relative group">
+                    <div class="absolute -left-[41px] top-7 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-darkBg border border-primary group-hover:bg-primary transition-colors duration-300"></div>
+                    <div class="glass-card p-6 hover:bg-slate-800/30">
+                        <h3 class="text-xl font-bold text-white flex items-center justify-between flex-wrap gap-2">
+                            Senior Backend Engineer
+                            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-3 py-1 rounded-full border border-slate-600">2022</span>
+                        </h3>
+                        <a target="_blank" href="https://rightminddev.com/" class="inline-block text-primary font-medium mt-1 mb-4 hover:underline">Rightmind</a>
+                        <p class="text-slate-400 text-sm leading-relaxed">Crafted a versatile PaaS integrating HR, finance, employee management, and point systems tailored to diverse business requirements without altering the core codebase.</p>
+                    </div>
+                </div>
+
+                <div class="reveal relative group">
+                    <div class="absolute -left-[41px] top-7 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-darkBg border border-primary group-hover:bg-primary transition-colors duration-300"></div>
+                    <div class="glass-card p-6 hover:bg-slate-800/30">
+                        <h3 class="text-xl font-bold text-white flex items-center justify-between flex-wrap gap-2">
+                            Flutter Engineer
+                            <span class="text-xs font-mono bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full border border-purple-500/30">Project-based</span>
+                        </h3>
+                        <p class="text-primary font-medium mt-1 mb-4">MET</p>
+                        <p class="text-slate-400 text-sm leading-relaxed">Developed high-performance eCommerce applications using Flutter for iOS/Android. Led a specialized IoT project designing an Arduino-based mobile application controller and communication tunnel for managing a network of air conditioning units.</p>
+                    </div>
+                </div>
+
+                <div class="reveal relative group">
+                    <div class="absolute -left-[41px] top-7 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-darkBg border border-primary group-hover:bg-primary transition-colors duration-300"></div>
+                    <div class="glass-card p-6 hover:bg-slate-800/30">
+                        <h3 class="text-xl font-bold text-white flex items-center justify-between flex-wrap gap-2">
+                            Senior Frontend Engineer
+                            <span class="text-xs font-mono bg-red-500/20 text-red-300 px-3 py-1 rounded-full border border-red-500/30">Project-based</span>
+                        </h3>
+                        <p class="text-primary font-medium mt-1 mb-4 text-red-400">Vodafone</p>
+                        <p class="text-slate-400 text-sm leading-relaxed">Spearheaded UI redesigns and optimized application performance (lazy loading, state management), significantly reducing bounce rates and load times.</p>
+                    </div>
+                </div>
+                
+                <div class="reveal relative group">
+                    <div class="absolute -left-[41px] top-7 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-darkBg border border-primary group-hover:bg-primary transition-colors duration-300"></div>
+                    <div class="glass-card p-6 hover:bg-slate-800/30">
+                        <h3 class="text-xl font-bold text-white flex items-center justify-between flex-wrap gap-2">
+                            Backend Engineer
+                            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-3 py-1 rounded-full border border-slate-600">2021</span>
+                        </h3>
+                        <a target="_blank" href="https://filerole.com/" class="inline-block text-primary font-medium mt-1 mb-4 hover:underline">Filerole</a>
+                        <p class="text-slate-400 text-sm leading-relaxed">Refined the codebase for a cloud-based ERP web application designed to streamline operations for small and medium-sized businesses.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects" class="py-20">
+            <div class="reveal">
+                <h2 class="text-3xl font-bold text-white mb-2">Recent Projects & SaaS</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-purple-500 rounded-full mb-12"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="reveal glass-card p-8 border-primary/40 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+                    <a target="_blank" href="https://catalsa.com" class="flex justify-between items-start mb-5 group-hover:text-primary transition-colors">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-primary transition-colors">Catalsa</h3>
+                        <span class="text-xs font-mono font-bold text-primary bg-primary/10 px-3 py-1.5 rounded-md border border-primary/30 shadow-[0_0_10px_rgba(59,130,246,0.2)]">SaaS</span>
+                    </a>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">A multi-tenant SaaS platform for fast-track academic peer review. Features a complex built-in wallet/escrow system for global payouts, RBAC, and strict versioned manuscript tracking.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge">Laravel</span>
+                        <span class="badge">Tailwind</span>
+                    </div>
+                </div>
+
+                <div class="reveal delay-100 glass-card p-8 group overflow-hidden relative">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+                    <a target="_blank" href="https://3dfit.ae" class="flex justify-between items-start mb-5">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">FIT</h3>
+                        <span class="text-xs font-mono text-slate-300 bg-slate-800 px-3 py-1.5 rounded-md border border-slate-600">Platform</span>
+                    </a>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">A versatile Service Provider Platform designed to offer multiple tailored services to various business industries with modular scaling.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge">Laravel</span>
+                        <span class="badge">VueJS</span>
+                        <span class="badge">NuxtJS</span>
+                    </div>
+                </div>
+
+                <div class="reveal glass-card p-8 group overflow-hidden relative">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-400/10 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+                    <div class="flex justify-between items-start mb-5">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-blue-300 transition-colors">New Brains</h3>
+                        <span class="text-xs font-mono text-slate-300 bg-slate-800 px-3 py-1.5 rounded-md border border-slate-600">EdTech LMS</span>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">A user-friendly Learning Management System focused on delivering straightforward, rich educational material for secondary school students.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge">Laravel</span>
+                        <span class="badge">ReactJS</span>
+                    </div>
+                </div>
+
+                <div class="reveal delay-100 glass-card p-8 group overflow-hidden relative">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+                    <a target="_blank" href="https://safka-eg.com/" class="flex justify-between items-start mb-5">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-orange-400 transition-colors">Safka / Dokan</h3>
+                        <span class="text-xs font-mono text-slate-300 bg-slate-800 px-3 py-1.5 rounded-md border border-slate-600">eCommerce</span>
+                    </a>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">Developed a robust multi-vendor eCommerce platform (Dokan) and an integrated Affiliate Marketing web application (Safka) supporting real-time publisher tracking and payouts.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge">Laravel</span>
+                        <span class="badge">MySQL</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-glassBorder bg-[#03070d]/90 py-12 relative z-10 backdrop-blur-xl">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <div class="flex items-center gap-2 justify-center md:justify-start mb-2">
+                    <i class="fa-solid fa-layer-group text-primary"></i>
+                    <p class="text-white font-bold text-lg tracking-wide">Eslam Shafey</p>
+                </div>
+                <p class="text-slate-500 text-sm font-medium">© <span id="thisYear"></span> All rights reserved. Architected in Cairo, Egypt.</p>
+            </div>
+            <div class="flex gap-6 text-xl">
+                <a href="https://wa.me/201125547914" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center bg-slate-800 text-slate-400 hover:bg-whatsapp hover:text-white hover:scale-110 transition-all shadow-lg" title="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="mailto:eslamshafey5056@gmail.com" class="w-10 h-10 rounded-full flex items-center justify-center bg-slate-800 text-slate-400 hover:bg-primary hover:text-white hover:scale-110 transition-all shadow-lg" title="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/eslam-shafey-1a52171b6/" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center bg-slate-800 text-slate-400 hover:bg-[#0077b5] hover:text-white hover:scale-110 transition-all shadow-lg" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/eslamelshafey" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center bg-slate-800 text-slate-400 hover:bg-[#333] hover:text-white hover:scale-110 transition-all shadow-lg" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
         </div>
-        
-        <div>
-            <h3>Senior Backend Developer</h3>
-            <p><a target="_blank" href="https://rightminddev.com/">Rightmind</a> | 2022</p>
-            <ul>
-                <li>Built a modular platform integrating HR, accounting, workflow automation, notifications, and employee management.</li>
-                <li>Designed reusable components to support product scalability across multiple clients.</li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Backend Developer</h3>
-            <p><a target="_blank" href="https://www.filerole.com/">Filerole</a> | 2021</p>
-            <ul>
-                <li>Developed a cloud-native ERP system used by SMBs for financial, HR, and operational management.</li>
-                <li>Improved system reliability and data integrity across multi-tenant deployments.</li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Head of Backend, Volunteer</h3>
-            <p><a target="_blank" href="https://web.facebook.com/ieee.alazhar/?_rdc=1&_rdr">IEEE Al-Azhar University</a> | 2022</p>
-            <ul>
-                <li>Led the backend development team, architected scalable and secure backend systems.</li>
-                <li>Collaborated with frontend developers to integrate APIs and ensure seamless user experiences.</li>
-                <li>Mentored junior developers and provided technical guidance.</li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Head of Web, Volunteer</h3>
-            <p><a target="_blank" href="https://x-project.co/">X-Project Cairo University</a> | 2021 - 2022</p>
-            <ul>
-                <li>Directed the web development team, oversaw design and deployment of web solutions.</li>
-                <li>Managed integration of backend services and optimized website performance.</li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Flutter Developer</h3>
-            <p>MET</p>
-            <ul>
-                <li>Developed and maintained high-performance eCommerce applications using Flutter.</li>
-                <li>Led the development of an Arduino-based mobile application controller for AC units.</li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Senior Frontend Developer</h3>
-            <p><a target="_blank" href="https://web.vodafone.com.eg/">Vodafone</a></p>
-            <ul>
-                <li>Led the development of scalable web applications, resulting in increased user satisfaction and site performance.</li>
-                <li>Implemented CI/CD pipelines for frontend projects.</li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>ASP.NET Developer</h3>
-            <p><a target="_blank" href="https://rayacorp.com/">Raya</a></p>
-            <ul>
-                <li>Developed and maintained web applications using ASP.NET, ensuring performance and security.</li>
-                <li>Collaborated on responsive and user-friendly interfaces.</li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Network Engineer</h3>
-            <p><a target="_blank" href="https://www.xceedcc.com/">Xceed</a></p>
-            <ul>
-                <li>Designed and implemented network infrastructure, ensuring high availability and security.</li>
-                <li>Managed and optimized network performance and security measures.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="recentProjects">
-        <h2>Recent Projects</h2>
-        <ul>
-            <li>
-                <h3><a target="_blank" href="https://catalsa.com/">catalsa</a></h3>
-                <h4>Technologies: Laravel</h4>
-                <p>Catalsa is a multi-tenant SaaS platform that streamlines fast-track peer review for academic journals. It enables authors to submit manuscripts, editors to manage reviewer selection and workflow, and reviewers to deliver structured evaluations within strict deadlines. The system includes versioned manuscript tracking, automated review cycles, role-based access control, audit logging, and a built-in wallet/escrow system to handle payments and payouts—ensuring transparency, reliability, and high-quality peer review at scale.</p>
-            <li>
-                <h3><a target="_blank" href="https://3dfit.ae">FIT</a></h3>
-                <h4>Technologies: Laravel, VueJS, NuxtJS</h4>
-                <p>Service Provider Platform: Developed a versatile platform offering multiple services tailored to various business needs. The platform is designed to fit different industries but has not been launched yet</p>
-            </li>
-            <li>
-                <h3><a target="_blank" href="https://rightminddev.com/">Right Mind</a></h3>
-                <h4>Technologies: Laravel</h4>
-                <p>PaaS that provide a backend operation as a customized service that meet the client requirement without change the backend codebase</p>
-            </li>
-            <li>
-                <h3><a target="_blank" href="https://www.ertiqaa.org/ar">ertiqaa</a></h3>
-                <h4>Technologies: Laravel</h4>
-                <p>Ertiqaa is a comprehensive web platform developed for a non-profit organization in Saudi Arabia focused on supporting individuals with disabilities. The website is designed to serve as both an informational and operational hub, integrating multiple functionalities to facilitate user engagement, service management, and community outreach.</p>
-            </li>
-            <li>
-                <h3><a target="_blank" href="https://www.ertiqaa.org/ar">ertiqaa</a></h3>
-                <h4>Technologies: Laravel</h4>
-                <p>Ertiqaa is a comprehensive web platform developed for a non-profit organization in Saudi Arabia focused on supporting individuals with disabilities. The website is designed to serve as both an informational and operational hub, integrating multiple functionalities to facilitate user engagement, service management, and community outreach.</p>
-            </li>            
-            <li>
-                <h3><a target="_blank" href="https://newbrainshigh.com/">New Brains</a></h3>
-                <h4>Technologies: Laravel, ReactJS</h4>
-                <p>LMS web application was created a user-friendly platform focused on delivering straightforward educational material for secondary school students.</p>
-            </li>
-            <li>
-                <h3><a target="_blank" href="http://46.202.143.6">Retail app</a> (In Development)</h3>
-                <h4>Technologies: Laravel</h4>
-                <p>A unified business management system offering dashboards, product catalogs, CRM, sales, inventory, purchasing, reports, product serial tracking, and full account settings — all in one streamlined platform.</p>
-            </li>
-            <li>
-                <h3><a target="_blank" href="https://www.filerole.com">Filerole</a></h3>
-                <h4>Technologies: Laravel</h4>
-                <p>ERP System: Developed a cloud-based ERP system with a separate domain, offering an easy-to-use platform for managing business operations.</p>
-            </li>
-            <li>
-                <h3><a target="_blank" href="https://safka-eg.com/">Safka Affiliates</a></h3>
-                <h4>Technologies: Laravel</h4>
-                <p>Affiliates marketing web application developed in laravel</p>
-            </li>
-            <li>
-                <h3><a target="_blank" href="#">Dokan</a></h3>
-                <h4>Technologies: Laravel</h4>
-                <p>Affiliate marketing system supporting publisher tracking and payouts.</p>
-            </li>
-            <li>
-                <h3><a target="_blank" href="https://github.com/eslamelshafey/flight-booking">flight booking</a></h3>
-                <h4>Technologies: PHP</h4>
-                <p>A simple sophisticated flight booking service</p>
-            </li>
-        </ul>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Testing: Jasmine Testing Framework, PHPUnit</li>
-            <li>Software Engineering: Agile, UML</li>
-            <li>Frontend Technologies: React.js, Vue.js, Angular, JavaScript, TypeScript, Sass, CSS</li>
-            <li>Programming Languages & Backend Technologies: Python, Java, C#, C, Assembly, PHP, ASP.NET, Nuxt.js, Laravel, Node.js, Next.js</li>
-            <li>Mobile Development: Flutter, Android (Java) </li>
-            <li>System Administration: Linux, Windows Server</li>
-            <li>Database Management: MySQL, PostgreSQL, SQLite, MongoDB, Redis</li>
-            <li>DevOps & Tools: Docker, AWS, VMware, GIT, Github actions</li>
-            <li>Object Storage / Cloud-Native Storage: S3, MinIO (S3-compatible object storage)</li>
-            <li>Web Servers & Reverse Proxies: Apache HTTP Server, Nginx, Tomcat</li>
-            <li>Messaging & Queueing: RabbitMQ</li>
-        </ul>
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-        <div>
-            <h3>Ain Shams University</h3>
-            <p>Education | Technology</p>
-        </div>
-    </section>
-
-    <section id="languages">
-        <h2>Languages</h2>
-        <ul>
-            <li>Arabic (Fluent)</li>
-            <li>English (Intermediate)</li>
-        </ul>
-    </section>
-
-    <section id="courses">
-        <h2>Courses</h2>
-        <ul class="inline">
-            <li>RHCE - </li>
-            <li>MCSE - </li>
-            <li>CCNA Security - </li>
-            <li>CCNA - </li>
-            <li>MCITP - </li>
-            <li>CEH - </li>
-            <li>OSCP</li>
-            <li>AWS Certified Developer</li>
-        </ul>
-    </section>
-
-    <section id="certificates">
-        <h2>Certificates</h2>
-        <ul>
-            <li><a target="_blank" href="https://www.udacity.com/certificate/e/657b835e-f937-11ec-a042-bfaed8e20d06">Advanced Full-Stack Web Development</a></li>
-            <li><a target="_blank" href="https://alx-intranet-active-storage-production.s3.amazonaws.com/vknknxycv28je70jhzq1fbxbl9z0?response-content-disposition=inline%3B%20filename%3D%2273-alx-aice-ai-career-essentials-certificate-eslam-shafey.png%22%3B%20filename%2A%3DUTF-8%27%2773-alx-aice-ai-career-essentials-certificate-eslam-shafey.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20241105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241105T170830Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=5469830f1f8b92d11d3f7a5c14e94b70df88a141867968159886fd6b49f1861c">ALX AICE</a></li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>
-            <span>© <span id="thisYear"></span> Eslam Shafey</span> |
-            <a target="_blank" href="https://www.linkedin.com/in/eslam-shafey-1a52171b6/">LinkedIn</a> |
-            <a target="_blank" href="https://github.com/eslamelshafey">Github</a>
-        </p>
     </footer>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3BZHR96QVZ"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', 'G-3BZHR96QVZ');
+        // Set dynamic year
+        document.getElementById('thisYear').textContent = new Date().getFullYear();
 
-        const year = new Date().getFullYear();
+        // Scroll Reveal Animation Logic
+        document.addEventListener("DOMContentLoaded", () => {
+            const reveals = document.querySelectorAll(".reveal");
 
-        document.querySelector("#thisYear").textContent = year;
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 100;
+
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add("active");
+                    }
+                });
+            };
+
+            // Initial check and scroll event listener
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll(); // Trigger once on load
+
+            // Navbar slight blur effect change on scroll
+            const navbar = document.getElementById("navbar");
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add("shadow-lg", "bg-slate-900/60");
+                } else {
+                    navbar.classList.remove("shadow-lg", "bg-slate-900/60");
+                }
+            });
+        });
     </script>
 </body>
 </html>
