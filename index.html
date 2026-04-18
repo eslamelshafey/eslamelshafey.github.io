@@ -136,8 +136,8 @@
     <header class="fixed w-full top-0 z-50 glass-card rounded-none border-t-0 border-l-0 border-r-0 px-6 py-4 transition-all duration-300" id="navbar">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <div class="text-xl font-extrabold tracking-tight text-white flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform">
-                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
-                    <i class="fa-solid fa-layer-group text-white text-sm"></i>
+                <div class="w-10 h-10 rounded-lg">
+                    <img width="50" src="https://eslamelshafey.github.io/logo.png" alt="">
                 </div>
                 Eslam Shafey
             </div>
@@ -161,7 +161,7 @@
 
     <main class="max-w-6xl mx-auto px-6 pt-36 pb-20">
         
-        <section class="py-16 md:py-24 max-w-4xl relative z-10">
+        <section class="max-w-4xl relative z-10">
             <div class="reveal active inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-semibold mb-6 shadow-[0_0_15px_rgba(59,130,246,0.2)] backdrop-blur-md">
                 <span class="relative flex h-2.5 w-2.5">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -442,11 +442,64 @@
         </section>
     </main>
 
+    <section id="contact" class="py-20 reveal">
+        <div class="max-w-3xl mx-auto">
+            <div class="glass-card p-8 md:p-12 relative overflow-hidden">
+                <div class="absolute -top-24 -right-24 w-48 h-48 bg-primary/20 blur-[60px] rounded-full pointer-events-none"></div>
+                
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-bold text-white mb-2">Get In Touch</h2>
+                    <p class="text-slate-400 mb-8">Have a project in mind or looking to hire? Let's discuss how I can help.</p>
+
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-slate-400 ml-1">Full Name</label>
+                                <input type="text" name="Name" placeholder="John Doe" required
+                                    class="w-full bg-slate-900/50 border border-glassBorder rounded-xl px-5 py-3.5 text-white placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-slate-400 ml-1">Email Address</label>
+                                <input type="email" name="Email" placeholder="john@example.com" required
+                                    class="w-full bg-slate-900/50 border border-glassBorder rounded-xl px-5 py-3.5 text-white placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-wider text-slate-400 ml-1">WhatsApp (Optional)</label>
+                            <div class="relative">
+                                <i class="fa-brands fa-whatsapp absolute left-5 top-1/2 -translate-y-1/2 text-slate-500"></i>
+                                <input type="text" name="Whatsapp" placeholder="+20..." 
+                                    class="w-full bg-slate-900/50 border border-glassBorder rounded-xl pl-12 pr-5 py-3.5 text-white placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-wider text-slate-400 ml-1">Project Details</label>
+                            <textarea name="Message" placeholder="Tell me about your project..." required rows="4"
+                                class="w-full bg-slate-900/50 border border-glassBorder rounded-xl px-5 py-3.5 text-white placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300 resize-none"></textarea>
+                        </div>
+                        
+                        <button type="submit" id="submit-btn" 
+                            class="w-full group relative bg-white text-slate-900 font-bold py-4 rounded-xl overflow-hidden transition-all duration-300 hover:scale-[1.02] active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                            <span id="btn-text" class="relative z-10 flex items-center justify-center gap-2">
+                                Send Message <i class="fa-solid fa-paper-plane text-xs transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></i>
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </button>
+                    </form>
+
+                    <div id="form-status" class="hidden mt-6 p-4 rounded-xl text-center text-sm font-medium animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="border-t border-glassBorder bg-[#03070d]/90 py-12 relative z-10 backdrop-blur-xl">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="text-center md:text-left">
                 <div class="flex items-center gap-2 justify-center md:justify-start mb-2">
-                    <i class="fa-solid fa-layer-group text-primary"></i>
+                    <img width="50" src="https://eslamelshafey.github.io/logo.png" alt="">
                     <p class="text-white font-bold text-lg tracking-wide">Eslam Shafey</p>
                 </div>
                 <p class="text-slate-500 text-sm font-medium">© <span id="thisYear"></span> All rights reserved. Architected in Cairo, Egypt.</p>
@@ -501,6 +554,50 @@
                     navbar.classList.remove("shadow-lg", "bg-slate-900/60");
                 }
             });
+        });
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwk2Zyf4uOy6GAYCwgckRrBYy5VKgJOy1jYNOKFpEzwLVCHQdbeZU5MzN6yIuPDNEvY/exec';
+        const form = document.getElementById('contact-form');
+        const status = document.getElementById('form-status');
+        const btn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            // UI Feedback: Loading
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+            btnText.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin"></i> Sending...';
+            status.classList.add('hidden');
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    // UI Feedback: Success
+                    status.className = "mt-6 p-4 rounded-xl text-center text-sm font-medium block bg-emerald-500/10 border border-emerald-500/30 text-emerald-400";
+                    status.innerHTML = '<i class="fa-solid fa-check-circle mr-2"></i> Message received! I\'ll get back to you soon.';
+                    
+                    btn.style.opacity = '1';
+                    btn.innerHTML = 'Sent Successfully!';
+                    btn.classList.add('bg-emerald-500', 'text-white');
+                    
+                    form.reset();
+                    setTimeout(() => {
+                        btn.disabled = false;
+                        btn.innerHTML = 'Send Another Message';
+                        btn.className = "w-full group relative bg-white text-slate-900 font-bold py-4 rounded-xl transition-all";
+                    }, 5000);
+                })
+                .catch(error => {
+                    // UI Feedback: Error
+                    status.className = "mt-6 p-4 rounded-xl text-center text-sm font-medium block bg-red-500/10 border border-red-500/30 text-red-400";
+                    status.innerHTML = 'Something went wrong. Please try again or WhatsApp me.';
+                    btn.disabled = false;
+                    btnText.innerHTML = 'Try Again';
+                    console.error('Error!', error.message);
+                });
         });
     </script>
 </body>
